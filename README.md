@@ -6,7 +6,7 @@ You can make a patch file and the program will apply the patch to the target fil
 You only have to write the code, then specify (with attributes) where to insert your code. And this program will do the rest for you.
 
 For more info see documentation: https://github.com/gvk/stitch-IL/blob/master/Documentation.md
-<br />
+
 Build: https://github.com/gvk/stitch-IL/releases/tag/v0.2-alpha
 <br />
 <br />
