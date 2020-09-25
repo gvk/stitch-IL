@@ -27,7 +27,7 @@ You may edit stitch-IL to support your needs and fix issues with it, but here is
 2. Start the program with: `stitch-IL.exe fabric.dll patch.dll`
 3. It will output a modified fabric.out.dll
 
-##H ow to write patches
+## How to write patches
 If might be worth looking at the source code, to understand a little bit better. Either way, here is my explanation:
 1. Find the classes / types you want to edit.
 2. Find the method you want to edit in that class.
