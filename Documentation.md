@@ -3,13 +3,13 @@
 Before I begin losely explaining how to use this tool. Let's just look an an example:
 ```
 public class GameState_MainPatch {
-  [PatchInformation(Offset = 137)]
-  public static void onPlayUpdate() {
-      if (Input.GetKeyDown(key)) {
-        Console.WriteLine("Key pressed!");
-      }
+    [PatchInformation(Offset = 137)]
+    public static void onPlayUpdate() {
+        if (Input.GetKeyDown(key)) {
+            Console.WriteLine("Key pressed!");
+        }
     }
-  }
+}
 ```
 Here we write a class in a separate dll file that will patch another file.  
 The class we patch is "GameState_Main" and we mark our code containing patches with the suffix "Patch".
