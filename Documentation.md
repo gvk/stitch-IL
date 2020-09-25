@@ -14,7 +14,7 @@ public class GameState_MainPatch {
 Here we write a class in a separate dll file that will patch another file.  
 The class we patch is "GameState_Main" and we mark our code containing patches with the suffix "Patch".
 Then name our method the exact same as the one we want to patch.
-The attribute tells stitch-IL to insert a method call to this method in the method GameState_Main::onPlayUpdate on IL instruction 137.
+The attribute tells stitch-IL to insert a method call to this method above in the target method GameState_Main::onPlayUpdate on IL instruction 137.
 So once patched, and we run the patch program, it will print "Key pressed!" if it reaches that code.  
 <br />
 ## Why the name?
