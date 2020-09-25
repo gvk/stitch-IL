@@ -7,7 +7,7 @@ You only have to write the code, then specify (with attributes) where to insert 
 
 For more info see documentation: https://github.com/gvk/stitch-IL/blob/master/Documentation.md
 
-Build: https://github.com/gvk/stitch-IL/releases/tag/v0.2-alpha
+Build: https://github.com/gvk/stitch-IL/releases/tag/v0.2-alpha  
 <br />
 <br />
 _( This entire program was written hastly, without much planing nor thinking. You may experience bugs and issues. Maybe even a headache or two while reading the code. )_  
