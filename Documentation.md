@@ -69,6 +69,11 @@ public static void onPlayUpdateII() {}
 ```
 You can add as many "II" as you like, though it has to be in pairs.  
 <br />
+Sometimes you don't want to call your function, if it shouldn't be used then you can add the suffix "ShouldExecute".  
+`public static bool onPlayUpdateShouldExecute() {return Play.enabled; }`
+If this function returns false then the main patch won't be called.  
+(you can also make a ShouldExecute2 if you need two of these)
+<br />
 Sometimes the types or methods have angle brackets in the name < >. And it wouldn't be possible to have that as a type/method name.
 You can therefore use `_LT_` and `_GT_` as a replacement.  
 `public static void _LT_Initialize_GT_m__14A()`  
@@ -76,4 +81,6 @@ You can therefore use `_LT_` and `_GT_` as a replacement.
 For the constructors you simply ommit the dot, and write `ctor` and `cctor` respectivly.
 <br />
 <br />
-Only Types with suffix "Patch" will be considered, only methods with the PatchInformation 
+# Other information
+Only Types with suffix "Patch" will be considered, only methods with the PatchInformation   
+I might have forgotten to write about some stuff... But this should pretty much be it.
