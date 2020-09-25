@@ -41,18 +41,18 @@ If might be worth looking at the source code, to understand a little bit better.
 10. Run the program
 
 ## Properties of the PatchInformation attribute
-* IL_Offset:  IL instruction offset/index, i.e. where at the target code to place your method call. (default: 0)
-* IL_ReturnTo:  IL instruction index to return to after patch has been called (and has returned). (default: -1  meaning continue)
-* DoReturnAfterCall:  whether the method should return after the patch has returned. (default: false)
-* DoReturnIfNullReturn:  whether method should return if patch returns null. (default: false)
-* StoreLoadResult:  whether to store and load the result of the patch in a variable (by index) in the target method, it will push the variable afterward so the next IL instruction has use it. (default: -1  meaning don't do this)
-* LoadVar:  whether to load a variable (by index) before calling the patch, effectively passing the variable to the patch. (default: -1  meaning don't do this)
-* PassOnAllArgs:  whether to pass on all arguments of the target method to the patch, it will pass an object[] with all arguments. (default: false)
-* PassInstanceArg:  whether to pass on the instance (aka "this") to the patch. (default: false)
-* PassArg_ByIndex:  pass a specific argument by its index. So you can say: 2 to get the argument with index 2. if you set it to: `0x100 | 1<<0 | 1<<2 ` will cause it to use a bit map, and so it will load both argument 0 and argument 2. (default: -1  meaning don't pass)
-* InsertDupInstruction:  inserts a dup instruction before the patch is called (you have to accept that parameter in your function). (default: false)
+* IL_Offset: &nbsp; IL instruction offset/index, i.e. where at the target code to place your method call. (default: 0)
+* IL_ReturnTo: &nbsp; IL instruction index to return to after patch has been called (and has returned). (default: -1  meaning continue)
+* DoReturnAfterCall: &nbsp; whether the method should return after the patch has returned. (default: false)
+* DoReturnIfNullReturn: &nbsp; whether method should return if patch returns null. (default: false)
+* StoreLoadResult: &nbsp; whether to store and load the result of the patch in a variable (by index) in the target method, it will push the variable afterward so the next IL instruction has use it. (default: -1  meaning don't do this)
+* LoadVar: &nbsp; whether to load a variable (by index) before calling the patch, effectively passing the variable to the patch. (default: -1  meaning don't do this)
+* PassOnAllArgs: &nbsp; whether to pass on all arguments of the target method to the patch, it will pass an object[] with all arguments. (default: false)
+* PassInstanceArg: &nbsp; whether to pass on the instance (aka "this") to the patch. (default: false)
+* PassArg_ByIndex: &nbsp; pass a specific argument by its index. So you can say: 2 to get the argument with index 2. if you set it to: `0x100 | 1<<0 | 1<<2 ` will cause it to use a bit map, and so it will load both argument 0 and argument 2. (default: -1  meaning don't pass)
+* InsertDupInstruction: &nbsp; inserts a dup instruction before the patch is called (you have to accept that parameter in your function). (default: false)
 * DecideReturn: tells it that this method determines whether to return or not (true/false) in the target method. (default: false)
-* TargetNumberOfArgs:  what number of args the target method has, could be used for filtering a certain one. (default: -1  meaning don't care)
+* TargetNumberOfArgs: &nbsp; what number of args the target method has, could be used for filtering a certain one. (default: -1  meaning don't care)
 
 **Note: You have to change your patch method to accept the arguments you choose to pass, else you will get a runtime error.**
 Sometimes the stitch-IL might warn you about this.
