@@ -1,6 +1,6 @@
 # Documentation
 
-Before I begin losely explaining how to use this tool. Let's just look an an example:
+Before I begin explaining how to use this tool. Let's just look an an example:
 ```
 public class GameState_MainPatch {
     [PatchInformation(Offset = 137)]
