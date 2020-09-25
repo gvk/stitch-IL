@@ -1,4 +1,4 @@
-#Documentation
+# Documentation
 
 Before I begin losely explaining how to use this tool. Let's just look an an example:
 ```
@@ -17,17 +17,17 @@ Then name our method the exact same as the one we want to patch.
 The attribute tells stitch-IL to insert a method call to this method in the method GameState_Main::onPlayUpdate on IL instruction 137.
 So once patched, and we run the patch program, it will print "Key pressed!" if it reaches that code.  
 <br />
-##Why the name?
+## Why the name?
 You can think of it as stitching a "patch" on a "fabric", it will insert "stitches" connecting the "fabric" to the "patch".  
 <br />
 
-##How to use
+## How to use
 You may edit stitch-IL to support your needs and fix issues with it, but here is how it works as of writing this:  
 1. Make a dll file with your changes.
 2. Start the program with: `stitch-IL.exe fabric.dll patch.dll`
 3. It will output a modified fabric.out.dll
 
-##How to write patches
+##H ow to write patches
 If might be worth looking at the source code, to understand a little bit better. Either way, here is my explanation:
 1. Find the classes / types you want to edit.
 2. Find the method you want to edit in that class.
@@ -40,7 +40,7 @@ If might be worth looking at the source code, to understand a little bit better.
 9. Any references needed (maybe even the target dll itself) can be put in a folder "references" next to the stitch-IL.exe
 10. Run the program
 
-##Properties of the PatchInformation attribute
+## Properties of the PatchInformation attribute
 * IL_Offset: IL instruction offset/index, i.e. where at the target code to place your method call. (default: 0)
 * IL_ReturnTo: IL instruction index to return to after patch has been called (and has returned). (default: -1  meaning continue)
 * DoReturnAfterCall: whether the method should return after the patch has returned. (default: false)
@@ -57,7 +57,7 @@ If might be worth looking at the source code, to understand a little bit better.
 **Note: You have to change your patch method to accept the arguments you choose to pass, else you will get a runtime error.**
 Sometimes the stitch-IL might warn you about this.
 
-##Additional features:
+## Additional features:
 Sometimes you want to patch one method multiple times, but it is impossible to have the same method name twice:
 Solution: You can add "II" as a suffix to your methods to have multiple method patches:
 ```
