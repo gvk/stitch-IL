@@ -59,7 +59,7 @@ Sometimes the stitch-IL might warn you about this.
 
 ## Additional features:
 Sometimes you want to patch one method multiple times, but it is impossible to have the same method name twice:
-Solution: You can add "II" as a suffix to your methods to have multiple method patches:
+Solution: You can add `II` as a suffix to your methods to have multiple method patches:
 ```
 [PatchInformation(Offset = 137)]
 public static void onPlayUpdate() {}
@@ -67,7 +67,7 @@ public static void onPlayUpdate() {}
 [PatchInformation(Offset = 654)]
 public static void onPlayUpdateII() {}
 ```
-You can add as many "II" as you like, though it has to be in pairs.  
+You can add as many `II` as you like, though it has to be in pairs.  
 <br />
 Sometimes you don't want to call your function, if it shouldn't be used then you can add the suffix "ShouldExecute".  
 `public static bool onPlayUpdateShouldExecute() {return Play.enabled; }`
