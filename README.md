@@ -7,7 +7,7 @@ You only have to write the code, then specify (with attributes) where to insert 
 
 For more info see documentation: https://github.com/gvk/stitch-IL/blob/master/Documentation.md
 
-Build: https://github.com/gvk/stitch-IL/releases/tag/v0.2-alpha  
+Build download: https://github.com/gvk/stitch-IL/releases/tag/v0.2-alpha  
 
 Start the program with: `stitch-IL.exe fabric.dll patch.dll`  
 Where "fabric" is the target and "patch" is your code you want to "stitch together".  
